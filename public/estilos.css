@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.sidebar .logo_content .logo {
+    color: #ffffff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo i {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 5px;
+    
+}
+
+.sidebar #menu {
+    color: #ffffff;
+    position: absolute;
+    left: 55%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar.active #menu {
+    left: 90%;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover {
+    color: #11101d;
+    background: #ffffff;
+}
+
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar ul li input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.sidebar .profile_content {
+    position: absolute;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile_content .profile {
+    background: #1d1b31;
+}
+
+.profile_content .profile .profile_details {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.sidebar.active .profile .profile_details {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profile .profile_details img {
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.profile .profile_details .name_job {
+    margin-left: 10px;
+}
+
+.profile .profile_details .name {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile .profile_details .job {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.profile #log_out {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    background: #1d1b31;
+    color: #ffffff;
+}
+
+.sidebar.active .profile #log_out {
+    left: 88%;
+    background: none;
+}
+
+.home_content {
+    position: absolute;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+}
+
+.home_content .text {
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    height: 35px;
+    width: 122px;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar.active ~ .home_content {
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.titulo_inicio {
+    background-color: #1d1b31;
+    color: #ffffff;
+    padding: .8rem 0;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.portada {
+    display: flex;
+    justify-content: center;
+}
+
+.portada img {
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.bienvenida {
+    margin: auto;
+    line-height: 35px;
+    width: 75%;
+}
+
+.bienvenida.texto {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.elegir {
+    display: flex;
+    justify-content: center;
+    margin: 0.75rem 0;
+}
+
+.elegir a {
+    margin: 1rem 7.5rem;
+    text-decoration: none;
+    background-color: #1d1b31;
+    padding: 1rem 1rem;
+    color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.elegir a:hover {
+    background-color: #ffffff;
+    color: #1d1b31;
+    border: #1d1b31 solid 2px;
+
+}
+
+.titulo-dos {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    font-size: 1.35rem;
+}
+
+.requisitos {
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+}
+
+.requisitos h3 {
+    font-size: 1.2rem;
+}
+
+.requisitos .subir {
+    width: 700px;
+    margin-top: 1.5rem;
+}
+
+.requisitos .subir form {
+    margin-top: 1.5rem;
+}
+
+.requisitos .subir label {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.requisitos .subir input {
+    font-size: 1.15rem;
+    margin-left: 2rem;
+}
+
+.requisitos .subir p {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .elegir {
+        flex-direction: column;
+    }
+}
+

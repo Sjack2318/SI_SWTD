@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 785px;
+    min-width: 320px;
+    border-radius: 3%;
+    margin: 5rem auto 5rem auto;
+}
+
+.registro {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1rem;
+    height: 6rem;
+}
+
+.registro p {
+    margin-right: 2rem;
+}
+
+.registro p a {
+    color: #e3627f;
+    text-decoration: none;
+}
+
+.titulo {
+    text-align: center;
+    color: #ffffff;
+    width: 70%;
+    margin: 0.5rem auto;
+}
+
+.titulo h1 {
+    font-size: 1.4rem;
+}
+
+.texto {
+    text-align: center;
+    color: #ffffff;
+    width: 60%;
+    margin: 1rem auto;
+    line-height: 1.5rem;
+}
+
+.formulario {
+    width: 63%;
+    margin: 0 auto;
+}
+
+.formulario label {
+    color: #000000;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.formulario input {
+    background-color: transparent;
+    border: 1px solid #495e8d;
+    border-radius: 5px;
+    width: 100%;
+    height: 3rem;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.formulario input::placeholder {
+    font-size: 1rem;
+}
+
+.formulario .boton {
+    background-color: #1d1b31;
+    margin: 1.5rem 0;
+    color: #ffffff;
+}
+
+.pie {
+    width: 80%;
+    height: 5rem;
+    color: #8f9ab2;
+    margin: 1.2rem auto;
+    border-radius: 10px;
+    background-color: #202e4e;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-dentro {
+    width: 70%;
+}
+
+.pie a {
+    text-decoration: none;
+    color: #e3627f;
+}
+
+.titulo_inicio {
+    background-color: #1d1b31;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+}
+
+.salida a {
+    width: 60%;
+    background-color: #1d1b31;
+}
+
+.salida {
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+}
+
+.salida a {
+    text-decoration: none;
+    border-radius: 12px;
+    border: #1d1b31 solid 2px;
+    padding: 0.75rem;
+    background-color: #1d1b31;
+    color: #ffffff;
+}
+
+.salida a:hover {
+    background-color: #ffffff;
+    color: #1d1b31;
+}
